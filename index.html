@@ -1,74 +1,13 @@
-<!--
-Facebook-style logo (HTML + CSS + SVG)
-Open this file in a browser to see a scalable, accessible Facebook "f" logo.
-Feel free to change the --size CSS variable to get different sizes.
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Facebook Logo (HTML + SVG)</title>
-  <style>
-    :root{
-      --size: 160px; /* change to scale the logo */
-      --fb-blue: #1877F2; /* official-ish Facebook blue */
-    }
-    html,body{height:100%;margin:0}
-    body{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(180deg,#f3f5f9,#ffffff);
-      font-family:system-ui,Segoe UI,Roboto, "Helvetica Neue", Arial;
-      padding:24px;
-    }
-
-    /* Container controls overall size and accessible focus styles */
-    .fb-logo{
-      width:var(--size);
-      height:var(--size);
-      display:inline-grid;
-      place-items:center;
-      border-radius:20%; /* square with rounded corners similar to app icon */
-      background:var(--fb-blue);
-      box-shadow:0 6px 18px rgba(25,39,65,0.12), inset 0 -6px 12px rgba(0,0,0,0.06);
-      transition:transform .16s ease, box-shadow .16s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .fb-logo:focus{outline:3px solid rgba(24,119,242,0.22);outline-offset:4px}
-    .fb-logo:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(25,39,65,0.14)}
-
-    /* SVG is sized to fill padding area and remain crisp */
-    .fb-logo svg{width:58%;height:58%;display:block}
-
-    .caption{margin-top:18px;text-align:center;color:#333;font-size:14px}
-
-    /* Small responsive example */
-    @media (max-width:420px){:root{--size:120px}}
-  </style>
-</head>
-<body>
-   Use a button role for accessibility if you want clickable behavior 
-  <div class="fb-logo" role="img" aria-label="Facebook logo" tabindex="0">
-     SVG draws a lowercase 'f' similar to Facebook mark. It's white on blue background. 
-    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <rect width="64" height="64" rx="12" fill="none" />
-      <path d="M40.8 22.6h-4.1c-.9 0-1.1.4-1.1 1.1v3.2h5.2l-.7 5.3h-4.5V44c0 .6-.2.8-.8.8h-4.6c-.6 0-.8-.2-.8-.8V32.2h-3.1v-5.3h3.1v-3.5c0-3.9 2.3-6.1 6-6.1 1.7 0 3.4.1 3.9.2v4.5z" fill="#fff"/>
-    </svg>
-  </div>
-
-  <div class="caption">Facebook-style logo — change <code>--size</code> in the CSS to scale</div>
-</body>
-</html> -->
-
-
-<!doctype html>
-<html lang="en">
-<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap" rel="stylesheet">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>REKLAMA SAVDO</title>
+  
   <style>
     * { 
       margin: 0; 
@@ -97,15 +36,32 @@ Feel free to change the --size CSS variable to get different sizes.
     header .logo { 
       font-size:26px; 
       font-weight:700; 
-      letter-spacing:-1px; 
+      letter-spacing: 1px; 
+      font-family: Georgia, 'Times New Roman', Times, serif; 
     }
 
     nav a {
       margin-left:30px;
       text-decoration:none;
+      font-family: Georgia, 'Times New Roman', Times, serif;
       color:#222;
       font-size:15px;
     }
+
+    .izlash{
+      border-radius: 100px;
+      width: 600px;
+      height: 40px;
+      font-size: 30px;
+      padding-left: 20px;
+    }
+    /* Rasm */
+    .rasm{
+      margin-top: 80px;
+    }
+    .rasm img {
+      width: 2500px;
+    }  
 
     /* Hero */
     .hero {
@@ -169,11 +125,61 @@ Feel free to change the --size CSS variable to get different sizes.
       text-align:center;
       font-size:14px;
     }
+    .search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    padding: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 20px;
+    width: 600px;
+    font-size: 20px;
+}
+
+.search-box input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.search-box button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 26px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #d4af37, #f6e27a);
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(212,175,55,0.4);
+}
+
+.search-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(212,175,55,0.8);
+}
+
+.search-box button:active {
+    transform: scale(0.95);
+}
   </style>
 </head>
 <body>
   <header>
     <div class="logo">REKLAMA SAVDO</div>
+    <div class="search-box">
+      <input type="search" placeholder="Search">
+      <button>Search</button>
+  </div>
     <nav>
       <a href="#">Home</a>
       <a href="#">Products</a>
@@ -182,10 +188,12 @@ Feel free to change the --size CSS variable to get different sizes.
       <a href="mailto:yahyobashir5@gmail.com">gmail</a>
     </nav>
   </header>
-
   <!-- <section class="hero"><h1>YUQORI SIFATLI MAHSULOTLAR</h1></section> -->
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.22/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/7lL0BEwa8ntKZFkA/scene.splinecode"></spline-viewer>
+  <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.22/build/spline-viewer.js"></script> -->
+  <!-- <spline-viewer url="https://prod.spline.design/7lL0BEwa8ntKZFkA/scene.splinecode"></spline-viewer> -->
+  <section class="rasm">
+    <img src="ishxona.PNG" alt="">
+  </section>
 
   <h2 class="section-title">Mahsulot Turlari</h2>
   <section class="grid">
@@ -194,8 +202,8 @@ Feel free to change the --size CSS variable to get different sizes.
       <div class="info">Orakallar</div>
     </div>
     <div class="card">
-      <img src="tarpaulin.jpg" />
-      <div class="info">Tarpaulin</div>
+      <img src="AKRIL.jpg" />
+      <div class="info">AKRIL</div>
     </div>
     <div class="card">
       <img src="flex-banner.jpg" />
@@ -203,7 +211,7 @@ Feel free to change the --size CSS variable to get different sizes.
     </div>
     <div class="card">
       <img src="mesh banner2.jpg" />
-      <div class="info">Setka Banner</div>
+      <div class="info">Mesh Banner</div>
     </div>
   </section>
 
@@ -212,7 +220,3 @@ Feel free to change the --size CSS variable to get different sizes.
   </footer>
 </body>
 </html>
-<!-- Build a professional website for Reselling company. It should contain purchase buttons and full backend to server also panel should have "Home""contact""ABout""product list" -->
-
-
-
